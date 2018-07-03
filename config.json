@@ -1,9 +1,9 @@
 {
   "TwitterConfig": {
-    "consumer_key": "Z1NihAjRxYkMOvBqBduU7DVzk",
-	"consumer_secret": "sMI1MTaigTXGxPsy8UYxmvls09xBVt8Ee4djJbiZB7jH2Gtrew",
-	"access_token_key": "994429576557326336-dpBzm8r9gLQRymZJUYnoXsDlmz9m6IR",
-	"access_token_secret": "eqLHK9F9GfZ02hvB3R0fJoOF8CanR6PiIzWouXCQz1Xlf"
+    "consumer_key": "",
+	"consumer_secret": "",
+	"access_token_key": "",
+	"access_token_secret": ""
   },
   "Parameters": {
     "No_of_Topics": [20],

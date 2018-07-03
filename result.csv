@@ -1,0 +1,2 @@
+No of Topics,No of Anotators,Max Features,MidDf,MaxIter,MeanAccuarcy,SdAccuracy,MeanLikelihood,Inter-Aggrement with topics Accuracy,Majority Voting Accuracy,Majority Voting with topics Accuracy,Majority Voting then reliability Accuracy
+20,10,2000,1,700,0.01,0.02,100,0.8876972470797185,0.9124257121388073,0.9062777512125145,0.9034770134572033

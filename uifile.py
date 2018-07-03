@@ -1,0 +1,47 @@
+from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,
+        QDialogButtonBox, QFormLayout, QGridLayout, QGroupBox, QHBoxLayout,
+        QLabel, QLineEdit, QMenu, QMenuBar, QPushButton, QSpinBox, QTextEdit,
+        QVBoxLayout)
+ 
+import sys
+ 
+class Dialog(QDialog):
+    NumGridRows = 10
+    NumButtons = 5
+ 
+    def __init__(self):
+        super(Dialog, self).__init__()
+        self.createFormGroupBox()
+ 
+        buttonBox = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        buttonBox.accepted.connect(self.accept)
+        buttonBox.rejected.connect(self.reject)
+ 
+        mainLayout = QVBoxLayout()
+        mainLayout.addWidget(self.formGroupBox)
+        mainLayout.addWidget(buttonBox)
+		mainLayout.addWidget(buttonBox)
+        self.setLayout(mainLayout)
+ 
+        self.setWindowTitle("Form Layout - pythonspot.com")
+ 
+    def createFormGroupBox(self):
+        self.formGroupBox = QGroupBox("Form layout")
+        layout = QFormLayout()
+        layout.addRow(QLabel("Name:"), QLineEdit())
+        layout.addRow(QLabel("Email:"), QLineEdit())
+        layout.addRow(QLabel("Country:"), QComboBox())
+        layout.addRow(QLabel("Age:"), QSpinBox())
+        self.formGroupBox.setLayout(layout)
+ 
+        def openFileNameDialog(self):    
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)", options=options)
+        if fileName:
+            print(fileName)
+			
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    dialog = Dialog()
+sys.exit(dialog.exec_())
